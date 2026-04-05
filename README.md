@@ -5,3 +5,5 @@ Este repositório contém os materiais relacionados ao curso de Mestrado em Mode
 ## Plano de Pesquisa
 
 O plano de pesquisa para o mestrado inclui a definição do tema de pesquisa, a revisão bibliográfica, a formulação de hipóteses e a metodologia a ser utilizada. O objetivo é desenvolver um projeto de pesquisa que contribua para o avanço do conhecimento na área de modelagem de sistemas complexos.
+
+📄 **[Acessar o Plano de Pesquisa Completo (PDF)](plano_pesquisa/out/main.pdf)**
