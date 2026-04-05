@@ -1,0 +1,93 @@
+\documentclass[12pt,a4paper]{article}
+
+% Pacotes essenciais
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{geometry}
+\geometry{a4paper, left=3cm, right=2cm, top=3cm, bottom=2cm}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{cite}
+
+% Formatação de espaçamento e fontes
+\setstretch{1.5}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+
+\begin{document}
+
+% Capa simples
+\begin{center}
+    \vspace*{2cm}
+    {\Large \textbf{UNIVERSIDADE DE SÃO PAULO}}\\
+    {\large \textbf{ESCOLA DE ARTES, CIÊNCIAS E HUMANIDADES}}\\
+    {\large \textbf{Programa de Pós-Graduação em Modelagem de Sistemas Complexos}}\\[4cm]
+
+    {\Large \textbf{Plano de Pesquisa}}\\[2cm]
+
+    {\Large \textbf{Hyslan Silva Cruz}}\\[4cm]
+
+\end{center}
+
+\newpage
+
+% --- 1. TÍTULO ---
+\section*{Título}
+Dinâmica de Interação e Comportamento Emergente em Redes Complexas de Múltiplos Agentes Baseados em LLMs Locais
+
+% --- 2. INTRODUÇÃO ---
+\section*{Introdução: Objetivos e Justificativa}
+A modelagem de sistemas complexos fornece o arcabouço matemático e computacional necessário para entender como interações locais entre componentes individuais geram comportamentos globais emergentes. Recentemente, a adoção de Modelos de Linguagem de Grande Escala (LLMs) impulsionou a criação de sistemas multiagentes autônomos. No entanto, o estudo da dinâmica de rede formada por múltiplos agentes que operam de maneira descentralizada (edge computing) e baseada em LLMs de código aberto executados localmente ainda é incipiente.
+
+\textbf{Objetivo Geral:}
+Modelar e simular as interações em uma rede complexa de agentes autônomos impulsionados por LLMs quantizados (como Dolphin-Mistral e Qwen), analisando a emergência de fenômenos como consenso, polarização e difusão de informação sob restrições de hardware e conectividade local.
+
+\textbf{Objetivos Específicos:}
+\begin{itemize}
+    \item Desenvolver um modelo matemático baseado em grafos e álgebra linear para representar o fluxo de informações probabilísticas entre os agentes.
+    \item Implementar um ambiente de simulação em Python e Rust para orquestrar a comunicação descentralizada entre instâncias de LLMs locais.
+    \item Analisar o impacto da topologia da rede nas taxas de convergência de ideias ou resolução cooperativa de problemas complexos.
+\end{itemize}
+
+\textbf{Justificativa:}
+A dependência de APIs centralizadas de modelos de linguagem cria gargalos de privacidade, latência e custo. Ao investigar redes de agentes rodando inferência localmente, este projeto contribui para a literatura de sistemas complexos aplicados à inteligência artificial distribuída, unindo o rigor formal matemático às necessidades reais de infraestruturas tecnológicas modernas.
+
+% --- 3. REVISÃO BIBLIOGRÁFICA ---
+\section*{Revisão Bibliográfica}
+O estudo de comportamentos emergentes em sistemas sociais e computacionais tem suas raízes na física estatística e na teoria de grafos (Barabási, 2016). No contexto de agentes autônomos, modelos matemáticos tradicionais frequentemente assumem comportamentos estocásticos simplificados. Contudo, trabalhos recentes de Park et al. (2023) demonstraram que a integração de LLMs como motor cognitivo de agentes produz interações sociais de alta complexidade.
+
+Diferentemente dos modelos centralizados, a inferência na borda (\textit{edge computing}) introduz restrições assíncronas e heterogeneidade cognitiva (modelos menores de 7B e 14B parâmetros). A transição de fase nestes sistemas — por exemplo, a rapidez com que a rede inteira chega à solução de um problema — requer modelagens com equações diferenciais e grafos dinâmicos para entender como o "conhecimento" se propaga e se estabiliza sem um coordenador central.
+
+% --- 4. METODOLOGIA E PLANO DE ATIVIDADES ---
+\section*{Metodologia e Plano de Atividades}
+A metodologia divide-se em três etapas inter-relacionadas:
+
+\textbf{1. Modelagem Matemática e Topológica:} Formulação do ambiente através de matrizes de adjacência e cálculos de limites de grafos, representando as conexões entre agentes. A dinâmica de estado será avaliada usando métodos de cálculo numérico.
+
+\textbf{2. Implementação Computacional:} O ambiente será estruturado em um servidor bare-metal baseado em Debian. Utilizaremos \textit{LM Studio} e \textit{AnythingLLM} para hospedar localmente diferentes instâncias quantizadas (Qwen, Dolphin-Mistral). O orquestrador da simulação será desenvolvido em Python (para integração rápida de IA) e componentes críticos de rede em Rust (para paralelismo eficiente).
+
+\textbf{3. Simulação e Coleta de Dados:} Serão rodados cenários com diferentes topologias (redes \textit{scale-free}, \textit{small-world}) observando as métricas de tempo para consenso e divergência comportamental.
+
+\textbf{Plano de Atividades (24 meses):}
+\begin{itemize}
+    \item \textbf{Meses 1-6:} Conclusão dos créditos em disciplinas, revisão sistemática da literatura e definição rígida das equações diferenciais do modelo.
+    \item \textbf{Meses 7-12:} Desenvolvimento da arquitetura de simulação em Python/Rust e integração com os LLMs rodando no servidor Debian.
+    \item \textbf{Meses 13-18:} Execução dos experimentos computacionais e análise estatística dos dados emergentes da rede.
+    \item \textbf{Meses 19-24:} Redação da dissertação, submissão de artigos e defesa.
+\end{itemize}
+
+% --- 5. RESULTADOS PARCIAIS ---
+\section*{Resultados Parciais}
+A pesquisa já se encontra em fase de fundamentação e testes preliminares de infraestrutura. Atualmente, o referencial teórico está sendo construído concomitantemente ao curso das disciplinas SCX5000 e SCX5002 do programa de pós-graduação, cursadas na modalidade de aluno especial, fornecendo o rigor conceitual exigido. Em paralelo, a infraestrutura local em servidor Debian já foi configurada com sucesso para testes iniciais de \textit{workloads} de IA e automação, atestando a viabilidade técnica de rodar modelos como Dolphin-Mistral e Qwen para a fase empírica do projeto.
+
+% --- 6. REFERÊNCIAS ---
+\section*{Referências Bibliográficas}
+\begin{itemize}
+    \item BARABÁSI, A.-L. \textit{Network Science}. Cambridge: Cambridge University Press, 2016.
+    \item NEWMAN, M. E. J. \textit{Networks: An Introduction}. Oxford University Press, 2010.
+    \item PARK, J. S. et al. Generative Agents: Interactive Simulacra of Human Behavior. \textit{arXiv preprint}, arXiv:2304.03442, 2023.
+    \item WANG, L. et al. Survey on Large Language Model based Autonomous Agents. \textit{Frontiers of Computer Science}, 2024.
+\end{itemize}
+
+\end{document}
