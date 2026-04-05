@@ -1,5 +1,4 @@
 *.aux
-*.bbl
 *.blg
 *.brf
 *.fls
@@ -10,3 +9,8 @@
 *.toc
 *.lof
 *.lot
+*.idx
+*.bbl
+*.ilg
+*.ind
+.vscode/

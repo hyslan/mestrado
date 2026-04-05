@@ -1,0 +1,16 @@
+\chapter{Metodologia}
+A metodologia divide-se em três etapas inter-relacionadas:
+
+\textbf{1. Modelagem Matemática e Topológica:} Formulação do ambiente através de matrizes de adjacência e cálculos de limites de grafos, representando as conexões entre agentes. A dinâmica de estado será avaliada usando métodos de cálculo numérico.
+
+\textbf{2. Implementação Computacional:} O ambiente será estruturado em um servidor bare-metal baseado em Debian. Utilizaremos \textit{LM Studio} e \textit{AnythingLLM} para hospedar localmente diferentes instâncias quantizadas (Qwen, Dolphin-Mistral). O orquestrador da simulação será desenvolvido em Python (para integração rápida de IA) e componentes críticos de rede em Rust (para paralelismo eficiente).
+
+\textbf{3. Simulação e Coleta de Dados:} Serão rodados cenários com diferentes topologias (redes \textit{scale-free}, \textit{small-world}) observando as métricas de tempo para consenso e divergência comportamental.
+
+\textbf{Plano de Atividades (24 meses):}
+\begin{itemize}
+    \item \textbf{Meses 1-6:} Conclusão dos créditos em disciplinas, revisão sistemática da literatura e definição rígida das equações diferenciais do modelo.
+    \item \textbf{Meses 7-12:} Desenvolvimento da arquitetura de simulação em Python/Rust e integração com os LLMs rodando no servidor Debian.
+    \item \textbf{Meses 13-18:} Execução dos experimentos computacionais e análise estatística dos dados emergentes da rede.
+    \item \textbf{Meses 19-24:} Redação da dissertação, submissão de artigos e defesa.
+\end{itemize}
